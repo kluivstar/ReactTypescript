@@ -7,6 +7,6 @@ type PersonProps = {
 }
 export const Person = (props: PersonProps) => {
   return (
-    <div>{props.name.first}</div>
+    <div>{props.name.first} {props.name.last}</div>
   )
 }
