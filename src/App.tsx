@@ -7,6 +7,8 @@ import PersonList from './components/PersonList'
 import { Status } from './components/Status';
 import { Heading } from './components/Heading';
 import { Clark } from './components/Clark';
+import { Button } from './components/Button';
+import { Input } from './components/Input';
 
 
 function App() {
@@ -35,7 +37,7 @@ function App() {
 
       {/* <Greet name="Sins" messageCount={12} isLoggedIn={true}/>
       <Person name={personName}/>
-      <PersonList names={nameList}/> */}
+      <PersonList names={nameList}/>
 
       <Status status='loading'/>
       <Heading>Text</Heading>
@@ -43,6 +45,13 @@ function App() {
         <Heading>Clark has a not so secret, "secret" identity.</Heading>
       </Clark>
       <Greet name="Sins"  isLoggedIn={true}/>
+       */}
+      <Button 
+        handleClick={(event, id) => {
+          console.log('Button clicked', event, id)
+        }}
+      /> 
+      <Input value='' handleChange={(event) => console.log(event)}/>
     </div>
   );
 }
