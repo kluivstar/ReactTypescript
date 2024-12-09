@@ -1,3 +1,4 @@
+// specifics: a value as a string representing the current value of the input an a handleChange a function triggerd on input value change, that accepts HTMLButtonElement change event
 type InputProps = {
     value: string
     handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void
