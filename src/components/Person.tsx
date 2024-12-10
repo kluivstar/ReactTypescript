@@ -1,10 +1,6 @@
-// type and object prop
-type PersonProps = {
-    name: {
-        first: string
-        last: string
-    }
-}
+// Extracted type imported then used
+import {PersonProps} from './Person.types'
+
 export const Person = (props: PersonProps) => {
   return (
     <div>{props.name.first} {props.name.last}</div>
