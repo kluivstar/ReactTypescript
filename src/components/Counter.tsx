@@ -1,15 +1,21 @@
 import React, { useReducer } from 'react'
+
+// define shape of state with count
 type CounterState = {
     count: number
 }
 
+// Defines the action object with type and payload 
 type CounterAction ={
     type: string
     payload: number
 }
 const initialState = {count: 0}
 
+//The reducer takes state and action as arguments.
+//It updates the state based on the action.type "increment and decrement"
 function reducer(state: CounterState, action: CounterAction){
+    
     switch (action.type){
         case 'increment':
             return {count: state.count + action.payload}

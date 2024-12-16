@@ -11,6 +11,8 @@ import { Button } from './components/Button';
 import { Input } from './components/Input';
 import { LoggedIn } from './components/state/LoggedIn';
 import { User } from './components/state/User';
+import { ThemeContextProvider } from './components/context/ThemeContext';
+import { Box } from './components/context/Box';
 
 
 function App() {
@@ -57,7 +59,9 @@ function App() {
       
       <Container styles={{border: '2px solid black', padding: '1rem'}}/>
       */}
-      <User/>
+      <ThemeContextProvider>
+        <Box/>
+      </ThemeContextProvider>
     </div>
   );
 }
