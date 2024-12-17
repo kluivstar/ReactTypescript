@@ -8,6 +8,8 @@ type AuthUser = {
 export const User = () => {
     // set state telling TS it can be "null" or AuthUser
     const [user, setUser] = useState<AuthUser | null>(null)
+
+    // handlers
     const handleLogin =() => {
         setUser({
             name: "Sins",

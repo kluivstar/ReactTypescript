@@ -16,6 +16,8 @@ import { Box } from './components/context/Box';
 import { UserContextProvider } from './components/context/UserContext';
 import {DomRef} from './components/ref/DomRef'
 import {Mutable} from './components/ref/Mutable'
+import { Private } from './components/auth/Private';
+import { Profile } from './components/auth/Profile';
 
 function App() {
 
@@ -67,8 +69,7 @@ function App() {
       <UserContextProvider>
         <User/>
       </UserContextProvider>
-      <DomRef/>
-      <Mutable/>
+      <Private isLoggedIn={true} Component={Profile}/>
     </div>
   );
 }
