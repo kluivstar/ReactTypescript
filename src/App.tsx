@@ -13,7 +13,9 @@ import { LoggedIn } from './components/state/LoggedIn';
 import { User } from './components/state/User';
 import { ThemeContextProvider } from './components/context/ThemeContext';
 import { Box } from './components/context/Box';
-
+import { UserContextProvider } from './components/context/UserContext';
+import {DomRef} from './components/ref/DomRef'
+import {Mutable} from './components/ref/Mutable'
 
 function App() {
 
@@ -49,7 +51,6 @@ function App() {
         <Heading>Clark has a not so secret, "secret" identity.</Heading>
       </Clark>
       <Greet name="Sins"  isLoggedIn={true}/>
-       
       <Button 
         handleClick={(event, id) => {
           console.log('Button clicked', event, id)
@@ -58,10 +59,16 @@ function App() {
       <Input value='' handleChange={(event) => console.log(event)}/>
       
       <Container styles={{border: '2px solid black', padding: '1rem'}}/>
-      */}
+      
       <ThemeContextProvider>
         <Box/>
       </ThemeContextProvider>
+      */}
+      <UserContextProvider>
+        <User/>
+      </UserContextProvider>
+      <DomRef/>
+      <Mutable/>
     </div>
   );
 }
