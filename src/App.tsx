@@ -18,6 +18,7 @@ import {DomRef} from './components/ref/DomRef'
 import {Mutable} from './components/ref/Mutable'
 import { Private } from './components/auth/Private';
 import { Profile } from './components/auth/Profile';
+import { List } from './components/generics/List';
 
 function App() {
 
@@ -65,11 +66,28 @@ function App() {
       <ThemeContextProvider>
         <Box/>
       </ThemeContextProvider>
-      */}
+      
       <UserContextProvider>
         <User/>
       </UserContextProvider>
       <Private isLoggedIn={true} Component={Profile}/>
+      */}
+      
+      <List
+        items ={[
+          {
+            id: 1,
+            first: 'Steve',
+            last: 'Roger',
+          },
+          {
+            id:2,
+            first: 'Tom',
+            last: 'Holland',
+          },
+        ]}
+        onClick={item => console.log(item)}
+      />
     </div>
   );
 }
