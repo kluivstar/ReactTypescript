@@ -22,6 +22,7 @@ import { List } from './components/generics/List';
 import { RandomNumber } from './components/restriction/RandomNumber';
 import { Toast } from './components/templateliterals/Toast';
 import CustomButton from './components/html/Button'
+import {Text} from './components/polymorphic/Text'
 
 function App() {
 
@@ -95,8 +96,18 @@ function App() {
       <Toast position='center'/>
       
       <RandomNumber value={10} isPositive/>
-      */}
+      
       <CustomButton variant='primary' onClick={() => console.log('Clicked')}/>Button label
+      */}
+      <Text size='lg' as='h1'>
+        Heading
+      </Text>
+      <Text size='sm' as='p'>
+        P
+      </Text>
+      <Text size='md' color='primary' as='label' htmlFor='someid'>
+        Label
+      </Text>
     </div>
   );
 }
